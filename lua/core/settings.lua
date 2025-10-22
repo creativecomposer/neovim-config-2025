@@ -34,7 +34,3 @@ vim.opt.colorcolumn = "100"
 
 -- Give more space for displaying messages
 vim.opt.cmdheight = 2
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
