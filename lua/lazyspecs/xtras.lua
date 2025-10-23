@@ -8,19 +8,21 @@ return {
     cmd = { "Remove", "Delete", "Move", "Chmod", "Mkdir", "SudoWrite", "SudoEdit" },
   },
   {
-    "lewis6991/gitsigns.nvim",
+    "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-      on_attach = function(buffer)
-        local gs = package.loaded.gitsigns
-
-        local function map(mode, l, r, desc)
-          vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc, silent = true })
-        end
-
-        map("n", "<leader>B", function() gs.blame_line({ full = true }) end, "Blame Line")
-        map("n", "<leader>b", function() gs.blame() end, "Blame Buffer")
-      end,
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
     },
   },
 }
