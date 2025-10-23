@@ -30,6 +30,9 @@ vim.keymap.set('n', '<Leader>p', '"+p', { desc = "[P]aste from clipboard" })
 -- Show diagnostic for the current line in a floating window
 vim.keymap.set("n", "<leader>xx", "<cmd>lua vim.diagnostic.open_float(nil, { focus = false })<cr>", { desc = "Show Diagnostic for current line" })
 
+-- Open undotree in a split
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
 -- shortcut to open terminal window
 --vim.keymap.set('n', '<leader>t', ':15new <Bar> terminal<CR>i', { desc = "Open [T]erminal" })
 

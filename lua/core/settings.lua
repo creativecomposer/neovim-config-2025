@@ -34,3 +34,6 @@ vim.opt.colorcolumn = "100"
 
 -- Give more space for displaying messages
 vim.opt.cmdheight = 2
+
+vim.opt.statusline =
+"%<%F, [%n] | %y"
