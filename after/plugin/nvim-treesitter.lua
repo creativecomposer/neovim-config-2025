@@ -1,6 +1,6 @@
 -- After installing the parsers using the below line, the jsx syntax highlighted properly and indentation worked as expected
-require('nvim-treesitter').install({ "bash", "css", "dockerfile", "html", "javascript", "lua", "markdown", "python",
-  "scss", "typescript", "vim", "yaml", })
+require('nvim-treesitter').install({ "bash", "css", "dockerfile", "html", "json", "javascript", "lua", "markdown",
+  "python", "scss", "tsx", "typescript", "vim", "yaml", })
 
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup("lazyvim_treesitter", { clear = true }),
