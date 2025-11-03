@@ -5,7 +5,7 @@ return {
   },
   {
     "tpope/vim-eunuch",
-    cmd = { "Remove", "Delete", "Move", "Chmod", "Mkdir", "SudoWrite", "SudoEdit" },
+    event = { "BufReadPre", "BufNewFile", },
   },
   {
     "folke/which-key.nvim",
