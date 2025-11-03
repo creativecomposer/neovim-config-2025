@@ -28,7 +28,13 @@ git clone https://github.com/creativecomposer/neovim-config-2025.git .
 
 3. `cd` to your desired project folder. Start Neovim.
 
-4. Search and open files using `<space>ff`.
+4. At startup, Neovim will download any missing plugins. If any plugins are outdated, you will see a message.
+Type `:Lazy` to open the lazy.nvim plugin manager dashboard. You will be able to see which plugins need to be updated.
+Press `U` to update all the outdated plugins.
+
+After you updated the plugins, press `q` to close the lazy.nvim dashboard.
+
+5. Type `<space>ff` to open the fuzzy file finder dialog. Find your desired file and press `<enter>` to open it.
 
 ## Features
 
