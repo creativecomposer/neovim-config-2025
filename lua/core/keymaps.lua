@@ -17,6 +17,9 @@ vim.keymap.set({ "n", "v" }, "<leader>c", [["+y]], { desc = "[C]opy highlighted 
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Go to previous location list item" })
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Go to next location list item" })
 
+-- shortcut to invoke Lazy
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Show [L]azy user interface" })
+
 -- See and clear messages
 vim.keymap.set("n", "<leader>m", ":10mes<cr>", { desc = "Show the last 10 [M]essages" })
 vim.keymap.set("n", "<leader>dm", ":mes clear<cr>", { desc = "[D]elete all [M]essages" })
