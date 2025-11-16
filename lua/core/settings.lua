@@ -36,4 +36,4 @@ vim.opt.colorcolumn = "100"
 vim.opt.cmdheight = 2
 
 vim.opt.statusline =
-"%<%F, [%n] | %y"
+"%<%F, [%n][%c]%=%y"

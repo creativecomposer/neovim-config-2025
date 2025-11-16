@@ -34,6 +34,8 @@ Press `U` to update all the outdated plugins.
 
 After you updated the plugins, press `q` to close the lazy.nvim dashboard.
 
+> [!NOTE] If you see any exception messages after upgrading the plugins, upgrade Neovim to the latest available version. That should solve the exceptions.
+
 5. Type `<space>ff` to open the fuzzy file finder dialog. Find your desired file and press `<enter>` to open it.
 
 ## Features
