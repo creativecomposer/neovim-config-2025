@@ -14,8 +14,8 @@ vim.keymap.set('n', '<Leader>0', '"0p', { desc = "Paste from register [0]" })
 -- shortcut to copy highlighted text to clipboard
 vim.keymap.set({ "n", "v" }, "<leader>c", [["+y]], { desc = "[C]opy highlighted text to clipboard" })
 
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Go to previous location list item" })
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Go to next location list item" })
+--vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Go to previous location list item" })
+--vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Go to next location list item" })
 
 -- shortcut to invoke Lazy
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Show [L]azy user interface" })
@@ -25,13 +25,13 @@ vim.keymap.set("n", "<leader>m", ":10mes<cr>", { desc = "Show the last 10 [M]ess
 vim.keymap.set("n", "<leader>dm", ":mes clear<cr>", { desc = "[D]elete all [M]essages" })
 
 -- shortcut to open netrw
-vim.keymap.set("n", "<leader>n", vim.cmd.Ex, { desc = "Open [n]etrw" })
+--vim.keymap.set("n", "<leader>n", vim.cmd.Ex, { desc = "Open [n]etrw" })
 
 -- shortcut to paste from clipboard
 vim.keymap.set('n', '<Leader>p', '"+p', { desc = "[P]aste from clipboard" })
 
 -- Show diagnostic for the current line in a floating window
-vim.keymap.set("n", "<leader>xx", "<cmd>lua vim.diagnostic.open_float(nil, { focus = false })<cr>",
+vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float(nil, { focus = false })<cr>",
   { desc = "Show Diagnostic for current line" })
 
 -- Open undotree in a split
