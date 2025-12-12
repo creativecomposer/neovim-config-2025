@@ -21,13 +21,24 @@ vim.keymap.set({ "x", "o" }, "as", function()
 end, { desc = "Select outer locals" })
 
 -- Movement keymaps
-vim.keymap.set({ "n", "x", "o" }, "<leader>n", function()
+vim.keymap.set({ "n", "x", "o" }, "]f", function()
   require("nvim-treesitter-textobjects.move").goto_next_start("@function.outer", "textobjects")
 end, { desc = "Goto [n]ext function" })
 
-vim.keymap.set({ "n", "x", "o" }, "<leader>N", function()
+vim.keymap.set({ "n", "x", "o" }, "[f", function()
   require("nvim-treesitter-textobjects.move").goto_previous_start("@function.outer", "textobjects")
 end, { desc = "Goto previous function" })
+
+vim.keymap.set({ "n", "x", "o" }, "]o", function()
+  require("nvim-treesitter-textobjects.move").goto_next_start({ "@conditional.outer" }, "textobjects",
+    { desc = "Goto next loop" })
+end)
+
+vim.keymap.set({ "n", "x", "o" }, "[o", function()
+  require("nvim-treesitter-textobjects.move").goto_previous_start({ "@conditional.outer" }, "textobjects",
+    { desc = "Goto next loop" })
+end)
+
 
 local ts_repeat_move = require "nvim-treesitter-textobjects.repeatable_move"
 
