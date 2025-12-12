@@ -5,7 +5,7 @@ return {
   },
   {
     "tpope/vim-eunuch",
-    event = { "BufReadPre", "BufNewFile", },
+    event = { "BufWinEnter", "BufNewFile", },
   },
   {
     "folke/which-key.nvim",
