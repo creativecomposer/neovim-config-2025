@@ -6,7 +6,8 @@ local function config()
   return {
     -- Each source is a plugin that needs to be installed separately
     sources = {
-      { name = 'nvim_lsp' },
+      { name = 'nvim_lsp', group_index = 2 },
+      { name = 'copilot',  group_index = 2 },
     },
     completion = {
       completeopt = "menu,menuone,noinsert",
@@ -30,6 +31,28 @@ return {
   event = { "InsertEnter" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    {
+      "zbirenbaum/copilot-cmp",
+      opts = {},
+      config = function(_, opts)
+        local copilot_cmp = require("copilot_cmp")
+        copilot_cmp.setup(opts)
+      end,
+      specs = {
+        {
+          "hrsh7th/nvim-cmp",
+          optional = true,
+          ---@param opts cmp.ConfigSchema
+          opts = function(_, opts)
+            table.insert(opts.sources, 1, {
+              name = "copilot",
+              group_index = 2,
+              priority = 100,
+            })
+          end,
+        },
+      },
+    },
   },
   opts = config
 }
