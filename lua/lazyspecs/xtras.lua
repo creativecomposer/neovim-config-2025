@@ -30,4 +30,8 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {},
+  },
 }
