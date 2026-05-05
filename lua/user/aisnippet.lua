@@ -13,8 +13,8 @@ local function safe_float(output)
       relative = "win",
       row = 10,
       col = 20,
-      width = 50,
-      height = 15,
+      width = 100,
+      height = 25,
       border = "double"
     }
     vim.api.nvim_open_win(buf, true, opts)
@@ -63,7 +63,7 @@ local function run_command()
 
   vim.system(command, {
     text = true,
-    timeout = 10000, -- timeout 10 seconds
+    timeout = 20000, -- timeout 20 seconds
     stdout = function(_, data)
       if data then
         --safe_float(split_string(data))
