@@ -13,8 +13,8 @@ local function safe_float(output)
       relative = "win",
       row = 10,
       col = 20,
-      width = 100,
-      height = 25,
+      width = 120,
+      height = 30,
       border = "double"
     }
     vim.api.nvim_open_win(buf, true, opts)
@@ -39,7 +39,6 @@ vim.api.nvim_create_user_command("AICode", function()
   local temp_file = os.tmpname()
 
   local cmd = string.format("echo %q | aichat --role %%code%% > %s", code_block, temp_file)
-  print("Executing " .. cmd)
   os.execute(cmd)
 
   local output = {}
@@ -75,3 +74,4 @@ end
 
 vim.api.nvim_create_user_command("AskAI", run_command, {})
 vim.keymap.set("n", "<leader>fa", ":AskAI<cr>", { desc = "[F]ind answer by asking [A]I" })
+vim.keymap.set("v", "<leader>fd", ":AICode<cr>", { desc = "[F]ind co[d]e by asking AI" })
